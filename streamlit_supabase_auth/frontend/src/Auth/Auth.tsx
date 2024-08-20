@@ -243,7 +243,7 @@ function SocialAuth({
               type="secondary"
               className={AuthStyles["sbui-auth-label"]}
             >
-              Sign in with
+              Inicia sesion con
             </Typography.Text>
             <Space size={2} direction={socialLayout}>
               {providers.map((provider) => {
@@ -265,7 +265,7 @@ function SocialAuth({
                       onClick={() => handleProviderSignIn(provider)}
                       className="flex items-center"
                     >
-                      {verticalSocialLayout && "Sign up with " + provider}
+                      {verticalSocialLayout && "Inicia sesion con " + provider}
                     </Button>
                   </div>
                 );
@@ -417,7 +417,7 @@ function EmailAuth({
                   setAuthView(VIEWS.FORGOTTEN_PASSWORD);
                 }}
               >
-                Forgot your password?
+                Olvidaste tu contraseña?
               </Typography.Link>
             )}
           </Space>
@@ -441,7 +441,7 @@ function EmailAuth({
                 setAuthView(VIEWS.MAGIC_LINK);
               }}
             >
-              Sign in with magic link
+              Inicia sesion
             </Typography.Link>
           )}
           {authView === VIEWS.SIGN_IN ? (
@@ -452,7 +452,7 @@ function EmailAuth({
                 handleViewChange(VIEWS.SIGN_UP);
               }}
             >
-              Don't have an account? Sign up
+              No tenes cuenta? Registrate
             </Typography.Link>
           ) : (
             <Typography.Link
@@ -462,7 +462,7 @@ function EmailAuth({
                 handleViewChange(VIEWS.SIGN_IN);
               }}
             >
-              Do you have an account? Sign in
+              Tenes cuenta? Inicia sesion
             </Typography.Link>
           )}
           {message && <Typography.Text>{message}</Typography.Text>}
@@ -572,7 +572,7 @@ function ForgottenPassword({
       <Space size={4} direction={"vertical"}>
         <Space size={3} direction={"vertical"}>
           <Input
-            label="Email address"
+            label="Email"
             placeholder="Your email address"
             icon={<IconMail size={21} stroke={"#666666"} />}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
